@@ -1,0 +1,267 @@
+{
+	"id": "4d3aed26-1c44-4e38-a12f-af3524526ef0",
+	"name": "Create and change task iterations 2",
+	"timestamp": "2024-09-19T08:13:20.865Z",
+	"collection_id": "18927542-f7448cc1-9ee8-44d7-8265-66fb83cb43e1",
+	"folder_id": 0,
+	"environment_id": "18927542-5ecbc96a-c975-4608-ad82-478457d24df4",
+	"totalPass": 20,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2024-09-19T08:13:17.998Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "ac329d85-5a94-4639-929a-244004a11501",
+			"name": "login",
+			"url": "https://3654e8b4-6f33-42b7-a3f4-002b4e26a447.mock.pstmn.io/authenticate",
+			"time": 832,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields": true,
+				"Token is a non-empty string": true,
+				"Content-Type is application/json": true,
+				"Token is in a valid format": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Token is a non-empty string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Token is in a valid format": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				832
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields": true,
+					"Token is a non-empty string": true,
+					"Content-Type is application/json": true,
+					"Token is in a valid format": true
+				}
+			]
+		},
+		{
+			"id": "4cd1b101-bc2a-48b5-892f-f75edccef01f",
+			"name": "get tasks list",
+			"url": "https://3654e8b4-6f33-42b7-a3f4-002b4e26a447.mock.pstmn.io/tasks?page=0&size=100",
+			"time": 228,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Content-Type header is application/json": true,
+				"Response has the required fields - id, text, answer, and title": true,
+				"Each task has non-empty id, text, answer, and title properties": true
+			},
+			"testPassFailCounts": {
+				"Content-Type header is application/json": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - id, text, answer, and title": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Each task has non-empty id, text, answer, and title properties": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				228
+			],
+			"allTests": [
+				{
+					"Content-Type header is application/json": true,
+					"Response has the required fields - id, text, answer, and title": true,
+					"Each task has non-empty id, text, answer, and title properties": true
+				}
+			]
+		},
+		{
+			"id": "58999b9a-f467-41c3-920e-d958063305c2",
+			"name": "create a task",
+			"url": "https://3654e8b4-6f33-42b7-a3f4-002b4e26a447.mock.pstmn.io/tasks",
+			"time": 237,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"Your test name": true,
+				"Response status code is 201": true,
+				"Response has the required fields - text, answer, and title": true,
+				"Response time is within an acceptable range": true,
+				"Validate the schema of the response JSON": true
+			},
+			"testPassFailCounts": {
+				"Your test name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response status code is 201": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - text, answer, and title": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is within an acceptable range": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate the schema of the response JSON": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				237
+			],
+			"allTests": [
+				{
+					"Your test name": true,
+					"Response status code is 201": true,
+					"Response has the required fields - text, answer, and title": true,
+					"Response time is within an acceptable range": true,
+					"Validate the schema of the response JSON": true
+				}
+			]
+		},
+		{
+			"id": "1bd7c6cd-2e14-4bfa-bd45-01f16d24983f",
+			"name": "change task text",
+			"url": "https://3654e8b4-6f33-42b7-a3f4-002b4e26a447.mock.pstmn.io/tasks/1",
+			"time": 256,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response has the required fields - id, text, answer, and title": true,
+				"Text, answer, and title are non-empty strings": true,
+				"Response time is less than 1000ms": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - id, text, answer, and title": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Text, answer, and title are non-empty strings": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1000ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				256
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response has the required fields - id, text, answer, and title": true,
+					"Text, answer, and title are non-empty strings": true,
+					"Response time is less than 1000ms": true
+				}
+			]
+		},
+		{
+			"id": "acf83a92-e305-475a-bfee-fc78d3d20430",
+			"name": "get task data",
+			"url": "https://3654e8b4-6f33-42b7-a3f4-002b4e26a447.mock.pstmn.io/tasks/1",
+			"time": 251,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Response status code is 200": true,
+				"Response time is less than 1100ms": true,
+				"Response has the required fields - id, text, answer, and title": true
+			},
+			"testPassFailCounts": {
+				"Response status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time is less than 1100ms": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response has the required fields - id, text, answer, and title": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				251
+			],
+			"allTests": [
+				{
+					"Response status code is 200": true,
+					"Response time is less than 1100ms": true,
+					"Response has the required fields - id, text, answer, and title": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1804,
+	"collection": {
+		"requests": [
+			{
+				"id": "ac329d85-5a94-4639-929a-244004a11501",
+				"method": "POST"
+			},
+			{
+				"id": "4cd1b101-bc2a-48b5-892f-f75edccef01f",
+				"method": "GET"
+			},
+			{
+				"id": "58999b9a-f467-41c3-920e-d958063305c2",
+				"method": "POST"
+			},
+			{
+				"id": "1bd7c6cd-2e14-4bfa-bd45-01f16d24983f",
+				"method": "PATCH"
+			},
+			{
+				"id": "acf83a92-e305-475a-bfee-fc78d3d20430",
+				"method": "GET"
+			}
+		]
+	}
+}
